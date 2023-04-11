@@ -15,7 +15,7 @@ body{
 header, footer{
     display: flex;
     background: greenyellow;
-    height: 80px;
+    height: 8rem;
     justify-content: center;
     align-items: center;
 }
@@ -32,12 +32,12 @@ header > p{
 
 header > img{
     position: absolute;
-    height: 80px;
-    left: 80px;
+    height: 8rem;
+    left: 12.5rem;
 }
 
 .cards{
-    height: 85vh;
+    height: 78.5vh;
     display: grid;
     width: 100%;
     grid-template-columns: repeat(12,1fr);
