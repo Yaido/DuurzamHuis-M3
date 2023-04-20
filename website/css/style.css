@@ -14,10 +14,12 @@ body{
 
 header, footer{
     display: flex;
-    background: greenyellow;
+    background: #57C5B6;
     height: 8rem;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding-left: 13rem;
+    padding-right: 13.5rem;
 }
 
 header > h1{
@@ -31,9 +33,7 @@ header > p{
 }
 
 header > img{
-    position: absolute;
     height: 8rem;
-    left: 12.5rem;
 }
 
 .cards{
@@ -66,12 +66,37 @@ header > img{
 .card--third{
     grid-column: 6 / 9;
     grid-row: 2 / 12;
-    padding: 2rem;
-    text-align: center;
-    font-size: 1.5rem;
 }
 
 .card--fourth{
     grid-column: 9 / 12;
     grid-row: 2 / 12;
+}
+
+.card > h1{
+    padding: 2rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 87.5rem) {
+    .dashboard{
+        grid-template-rows: repeat(12, 20rem);
+        height: auto;
+        gap: 2rem;
+    }
+    .section--first{
+        grid-column: 1/-1;
+        grid-row: 1/7;
+        padding: 0;
+        padding-bottom: 2rem;
+        padding-right: 0;
+    }
+    .card{
+        flex-grow: 1;
+    }
+    .section--second{
+        grid-column: 1/-1;
+        grid-row: 7/13;
+    }
 }

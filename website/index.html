@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Een dashboard om een duidelijk overzicht te krijgen op je maandelijkse energieverbruik.">
+    <meta name="description"
+        content="Een dashboard om een duidelijk overzicht te krijgen op je maandelijkse energieverbruik.">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/main.js" defer></script>
     <title>Energieverbruik-Dashboard</title>
 </head>
+
 <body>
-    <header>
-        <h1>Energetic IT</h1>
-        <p id="js--tijd"></p>
-        <img src="img/Logo.jpg" alt="Logo van energetic IT">
-    </header>
+    <main class="dashboard">
+        <header>
+            <img src="img/Logo.jpg" alt="Logo van energetic IT">
+            <h1>Energetic IT</h1>
+            <p id="js--tijd"></p>
+        </header>
         <ul class="cards">
             <li class="card card--first">
-                
+                <canvas id="js--chart--3"></canvas>
             </li>
             <li class="card card--second">
                 <canvas id="js--chart--2"></canvas>
             </li>
             <li class="card card--third">
-                <h1>energie verbruik</h1>
+                <h1>Energie Verbruik in KW</h1>
                 <canvas id="js--chart--1"></canvas>
             </li>
             <li class="card card--fourth">
-
+                <h1>Water Verbruik in M3</h1>
+                <canvas id="js--chart--4"></canvas>
             </li>
         </ul>
-    <footer>
+        <footer>
 
-    </footer>
+        </footer>
+    </main>
 </body>
+
 </html>

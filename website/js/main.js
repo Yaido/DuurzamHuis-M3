@@ -2,18 +2,24 @@ let tijd = document.getElementById("js--tijd");
 
 setInterval(() =>{
     let d = new Date();
-    tijd.innerHTML = d.toLocaleTimeString();
+    let time = d.toLocaleTimeString();
+    let date = d.toLocaleDateString();
+    let currentdate = `${time} ${date}`;
+    tijd.innerHTML = currentdate;
 },1000)
 
+const date = new Date();
+console.log(date);
+
 const labels = [
-    "January",
-    "February",
-    "March",
+    "Januari",
+    "Februari",
+    "Maart",
     "April",
-    "May",
-    "June",
-    "July",
-    "August",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Augustus",
     "September",
     "October",
     "November",
@@ -22,26 +28,59 @@ const labels = [
 ];
 
 
-const data = {
+const energieData = {
     labels: labels,
     datasets: [
         {
-            label: "Energy cost per month",
+            label: "Energie Kosten Per Maand",
             data: [800,1200,750,900,1100,600,800,950,700,630,1150,850],
-            backgroundcolor: ['#FF6B6B','#FFD93D','#6BCB77','#4D96FF','#F473B9'],
+            backgroundColor: [
+                '#57C5B6',
+                '#159895',
+                '#1A5F7A',
+                '#002B5B'
+              ],
+        }
+    ]
+}
+
+const waterData = {
+    labels: labels,
+    datasets: [
+        {
+            label: "Water verbruik per maand",
+            data: [3,6,2,3,9,4,6,3,1,7,5,6],
+            backgroundColor: [
+                '#57C5B6',
+                '#159895',
+                '#1A5F7A',
+                '#002B5B'
+              ],
         }
     ]
 }
 
 const config = {
-    type:'doughnut',
-    data: data,
+    type:'pie',
+    data: energieData,
 }
 
 const config2 = {
     type: 'bar',
-    data: data,
+    data: energieData,
+}
+
+const config3 = {
+    type: 'line',
+    data: waterData,
+}
+
+const config4 = {
+    type: 'doughnut',
+    data: waterData,
 }
 
 new Chart(document.getElementById("js--chart--1"), config);
 new Chart(document.getElementById("js--chart--2"), config2);
+new Chart(document.getElementById("js--chart--3"), config3);
+new Chart(document.getElementById("js--chart--4"), config4);
