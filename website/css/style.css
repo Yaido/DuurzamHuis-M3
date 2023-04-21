@@ -36,6 +36,12 @@ header > img{
     height: 8rem;
 }
 
+footer > a{
+    font-family: sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
 .cards{
     height: 78.5vh;
     display: grid;
@@ -49,8 +55,7 @@ header > img{
     list-style: none;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 1rem;
-    border: 0.2rem black solid;
-    box-shadow: 0.5rem 0.5rem #e2e2e2;
+    box-shadow: 0px 0px 10px 0.8px rgba(0,0,0,0.4);
 }
 
 .card--first{
